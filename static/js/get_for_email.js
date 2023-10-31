@@ -19,9 +19,9 @@ function getForEmail() {
             var td_nombre = document.createElement("td");
             var td_telefono = document.createElement("td");
 
-            td_email.innerHTML = json[0]["email"];
-            td_nombre.innerHTML = json[0]["nombre"];
-            td_telefono.innerHTML = json[0]["telefono"];
+            td_email.innerHTML = json["email"];
+            td_nombre.innerHTML = json["nombre"];
+            td_telefono.innerHTML = json["telefono"];
             
 
             tr.appendChild(td_email);
