@@ -12,7 +12,7 @@ function getForEmail() {
         console.log("json: " + json);
         console.log("status_code: " + request.status);
 
-        if (response.length > 0 && json.length > 0) {
+        if (json.length > 0) {
             var tbody_contactos = document.getElementById("tbody_contactos");
             var tr = document.createElement("tr");
             var td_email = document.createElement("td");
