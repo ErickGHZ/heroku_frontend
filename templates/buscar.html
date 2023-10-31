@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        <a href="">Inicio</a>
+        <a href="/">Inicio</a>
         <form id="search-form">
             <label for="email">Email:</label>
             <input type="text" id="email" name="email">
@@ -22,8 +22,6 @@
             </tbody>
         </table>
         <script>
-            document.body.onload = getAll();
-            
             function searchContact() {
                 var emailInput = document.getElementById("email");
                 var email = emailInput.value;
