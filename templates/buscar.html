@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Buscar contacto</title>
+        <title>Contactos</title>
+        <script type="text/javascript" src="../static/js/get_for_email.js"></script>
     </head>
+
     <body>
-        <h1>Buscar contacto</h1>
+        <a href="buscar">Buscar</a>
+        <form id="search-form">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <button type="button" onclick="searchContact()">Buscar</button>
+        </form>
+        <table border="1" id="table_contactos">
+            <thead id="thead_contactos">
+                <th>Email</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+            </thead>
+            <tbody id="tbody_contactos">
+            </tbody>
+        </table>
+        <script>
+            document.body.onload = getAll();
+            
+            function searchContact() {
+                var emailInput = document.getElementById("email");
+                var email = emailInput.value;
+                getForEmail(email);
+            }
+        </script>
     </body>
 </html>

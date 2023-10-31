@@ -32,8 +32,6 @@ function getAll(){
 
             tbody_contactos.appendChild(tr);
         }
-
     };
-
- 
 };
+
