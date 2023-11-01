@@ -36,7 +36,10 @@ function getForEmail() {
         } else {
         
             var tbody_contactos = document.getElementById("tbody_contactos");
-            tbody_contactos.innerHTML = '<tr><td colspan="3">No se encontró ningún contacto con ese email.</td></tr>';
+            var tr = document.createElement("tr");
+            var td_error = document.createElement("td");
+            td_error.innerHTML = '<tr><td colspan="3">No se encontró ningún contacto con ese email.</td></tr>';
+            tr.appendChild(td_error);
             tbody_contactos.appendChild(tr);
         }
     };
