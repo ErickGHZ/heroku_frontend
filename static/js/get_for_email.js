@@ -40,6 +40,7 @@ function getForEmail() {
             var td_error = document.createElement("td");
             td_error.innerHTML = '<tr><td colspan="3">No se encontró ningún contacto con ese email.</td></tr>';
             tr.appendChild(td_error);
+            tbody_contactos.innerHTML = '';
             tbody_contactos.appendChild(tr);
         }
     };
