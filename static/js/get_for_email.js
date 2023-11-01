@@ -37,6 +37,7 @@ function getForEmail() {
         
             var tbody_contactos = document.getElementById("tbody_contactos");
             tbody_contactos.innerHTML = '<tr><td colspan="3">No se encontró ningún contacto con ese email.</td></tr>';
+            tbody_contactos.appendChild(tr);
         }
     };
 }
