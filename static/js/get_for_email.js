@@ -37,10 +37,8 @@ function getForEmail() {
             var tbody_contactos = document.getElementById("tbody_contactos");
             var tr = document.createElement("tr");
             var td_error = document.createElement("td");
-            td_error.innerHTML = '<tr><td colspan="3">No se encontró ningún contacto con ese email.</td></tr>';
+            td_error.innerHTML = '<td colspan="3">No se encontró ningún contacto con ese email.</td>';
             tr.appendChild(td_error);
-            tr.appendChild(td_error.cloneNode(true)); // Clone for the other two columns
-            tr.appendChild(td_error.cloneNode(true));
             tbody_contactos.innerHTML = '';
             tbody_contactos.appendChild(tr);
         }
