@@ -37,10 +37,16 @@ function getForEmail() {
             var tbody_contactos = document.getElementById("tbody_contactos");
             var tr = document.createElement("tr");
             var td_error = document.createElement("td");
-            td_error.innerHTML = '<td colspan="3">No se encontró ningún contacto con ese email.</td>';
+        
+            // Utiliza un solo td con colspan="3" para que el mensaje se extienda a las tres celdas
+            td_error.setAttribute("colspan", "3");
+            td_error.textContent = 'No se encontró ningún contacto con ese email.';
+        
             tr.appendChild(td_error);
+        
             tbody_contactos.innerHTML = '';
             tbody_contactos.appendChild(tr);
         }
+        
     };
 }
