@@ -7,11 +7,11 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route("/buscar")
+@app.route("/buscar",methods=["GET"])
 def buscar():
     return render_template('buscar.html')
 
-@app.route("/prueba",methods=["GET","POST"])
-def prueba():
+@app.route("/insetar",methods=["POST"])
+def insetar():
     '''Pagina para probar DOM'''
-    return render_template('prueba.html')
+    return render_template('insetar.html')
