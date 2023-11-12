@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Contactos</title>
-        <script type="text/javascript" src="../static/js/get_for_email.js"></script>
-    </head>
 
-    <body>
+<head>
+    <title>Contactos</title>
+    <script type="text/javascript" src="../static/js/get_for_email.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css" />
+</head>
+
+<body>
+    <div class="header-container">
+        <h1 id="header">Buscar Contacto</h1>
         <a href="/">Inicio</a>
-        <form id="search-form">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email">
-            <button type="button" onclick="getForEmail(document.getElementById('email').value)">Buscar</button>
-        </form>
-        <table border="1" id="table_contactos">
+    </div>
+
+    <form id="search-form">
+        <p><label for="email">Email:</label>
+        <input type="text" id="email" name="email" /></p>
+        <button type="button" onclick="getForEmail(document.getElementById('email').value)">
+            Buscar
+        </button>
+    </form>
+    <div id="tabla_contenedor">
+        <table id="table_contactos">
             <thead id="thead_contactos">
-                <th>Email</th>
-                <th>Nombre</th>
-                <th>Teléfono</th>
-                <th>Opciones</th>
+                <tr>
+                    <th>Email</th>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Opciones</th>
+                </tr>
             </thead>
-            <tbody id="tbody_contactos">
-            </tbody>
+            <tbody id="tbody_contactos"></tbody>
         </table>
-    </body>
+    </div>
+</body>
+
 </html>

@@ -38,9 +38,9 @@ function getAll() {
             td_opciones.innerHTML = '';
 
             td_opciones.appendChild(enlaceVer);
-            td_opciones.appendChild(document.createTextNode(' | ')); // Agregar un separador
+            td_opciones.appendChild(document.createTextNode('   |   ')); // Agregar un separador
             td_opciones.appendChild(enlaceEditar);
-            td_opciones.appendChild(document.createTextNode(' | ')); // Agregar un separador
+            td_opciones.appendChild(document.createTextNode('   |   ')); // Agregar un separador
             td_opciones.appendChild(enlaceBorrar);
 
 

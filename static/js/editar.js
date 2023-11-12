@@ -10,10 +10,9 @@ function getContactDetails() {
         const response = request.responseText;
         const json = JSON.parse(response);
 
-        document.getElementById('email').textContent = json.email;
-        document.getElementById('nombre').textContent = json.nombre;
-        document.getElementById('telefono').textContent = json.telefono;
-        console.log(json.email);
+        document.getElementById('email').value = json.email;
+        document.getElementById('nombre').value = json.nombre;
+        document.getElementById('telefono').value = json.telefono;
     };
 }
 
@@ -24,9 +23,9 @@ function goBack() {
 }
 
 function editar() {
-    var newEmail = document.getElementById('email').innerText;
-    var newNombre = document.getElementById('nombre').innerText;
-    var newTelefono = document.getElementById('telefono').innerText;
+    var newEmail = document.getElementById('email').value;
+    var newNombre = document.getElementById('nombre').value;
+    var newTelefono = document.getElementById('telefono').value;
 
     if (confirm("¿Estás seguro de que deseas actualizar este contacto?")) {
         var request = new XMLHttpRequest();
@@ -43,10 +42,8 @@ function editar() {
         request.send(JSON.stringify(updatedData));
 
         request.onload = (e) => {
-         
             alert("Contacto actualizado exitosamente");
             window.history.back();
-       
         }
     }
 }
