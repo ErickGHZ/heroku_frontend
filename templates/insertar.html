@@ -2,24 +2,19 @@
 <html lang="es">
     <head>
         <title>Contactos</title>
-        <script type="text/javascript" src="../static/js/get_for_email.js"></script>
+        <script type="text/javascript" src="../static/js/post.js"></script>
     </head>
 
     <body>
         <a href="/">Inicio</a>
         <form id="search-form">
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email">
-            <button type="button" onclick="getForEmail(document.getElementById('email').value)">Buscar</button>
+            <input type="text" id="email" name="email"><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br>
+            <label for="telefono">Telefono:</label>
+            <input type="text" id="telefono" name="telefono">
+            <button type="button" onclick="post(document.getElementById('email', 'nombre', 'telefono').value)">Insertar</button>
         </form>
-        <table border="1" id="table_contactos">
-            <thead id="thead_contactos">
-                <th>Email</th>
-                <th>Nombre</th>
-                <th>Teléfono</th>
-            </thead>
-            <tbody id="tbody_contactos">
-            </tbody>
-        </table>
     </body>
 </html>

@@ -11,7 +11,18 @@ def index():
 def buscar():
     return render_template('buscar.html')
 
-@app.route("/insetar",methods=["POST"])
-def insetar():
-    '''Pagina para probar DOM'''
-    return render_template('insetar.html')
+@app.route("/insertar",methods=["GET","POST"])
+def insertar():
+    return render_template('insertar.html')
+
+@app.route("/ver",methods=["GET"])
+def ver():
+    return render_template('ver.html')
+
+@app.route("/borrar",methods=["GET", "POST"])
+def borrar():
+    return render_template('borrar.html')
+
+@app.route("/editar",methods=["GET", "POST"])
+def editar():
+    return render_template('editar.html')
