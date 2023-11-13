@@ -20,6 +20,7 @@ window.onload = getContactDetails;
 
 function goBack() {
     window.history.back();
+    location.reload();
 }
 
 function editar() {
@@ -43,8 +44,8 @@ function editar() {
 
         request.onload = (e) => {
             alert("Contacto actualizado exitosamente");
-            window.history.back();
-            location.reload();
+            goBack();
+
         }
     }
 }
