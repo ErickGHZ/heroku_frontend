@@ -14,11 +14,11 @@
     </div>
     <form id="search-form">
         <p><label for="email">Email:</label>
-        <input type="text" id="email" name="email" /></p>
+        <input type="text" id="email" name="email" required/></p>
         <p><label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre"/></p>
+        <input type="text" id="nombre" name="nombre" required/></p>
         <p><label for="telefono">Telefono:</label>
-        <input type="text" id="telefono" name="telefono" /></p>
+        <input type="text" id="telefono" name="telefono" required/></p>
         <button type="button" onclick="post(document.getElementById('email', 'nombre', 'telefono').value)">
             Insertar
         </button>
