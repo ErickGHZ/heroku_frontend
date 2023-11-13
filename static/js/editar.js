@@ -22,6 +22,7 @@ function goBack() {
     window.history.back();
 }
 
+    
 function editar() {
     var newEmail = document.getElementById('email').value;
     var newNombre = document.getElementById('nombre').value;
@@ -44,7 +45,7 @@ function editar() {
         request.onload = (e) => {
             alert("Contacto actualizado exitosamente");
             window.history.back();
-            
+            window.location.href = "/";
         }
     }
 }
