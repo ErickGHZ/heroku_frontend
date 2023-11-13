@@ -44,6 +44,7 @@ function editar() {
         request.onload = (e) => {
             alert("Contacto actualizado exitosamente");
             window.history.back();
+            location.reload();
         }
     }
 }
