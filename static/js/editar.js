@@ -20,6 +20,7 @@ window.onload = getContactDetails;
 
 function goBack() {
     window.history.back();
+    location.reload();
 }
 
 function editar() {
