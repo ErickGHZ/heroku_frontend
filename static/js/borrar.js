@@ -21,6 +21,7 @@ window.onload = getContactDetails;
 
 function goBack() {
     window.history.back();
+    location.reload();
 }
 
 function borrar() {
@@ -35,7 +36,7 @@ function borrar() {
             
             alert("Contacto borrado exitosamente");
             window.history.back();
-            location.reload();
+            goBack();
             
         };
     }
