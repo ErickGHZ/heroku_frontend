@@ -35,6 +35,7 @@ function borrar() {
             
             alert("Contacto borrado exitosamente");
             window.history.back();
+            location.reload();
             
             
         };
