@@ -4,6 +4,11 @@ function getForEmail() {
     var url = "https://heroku-mysql-b9e2aa5c918c.herokuapp.com/contactos/" + encodeURIComponent(email);
     request.open('GET', url);
     request.send();
+    
+    if (!email) {
+        alert('Por favor, ingrese un valor.');
+        return;
+    }
 
     request.onload = (e) => {
         const response = request.responseText;

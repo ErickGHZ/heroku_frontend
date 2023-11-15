@@ -3,8 +3,8 @@ function post() {
     var nombre = document.getElementById('nombre').value;
     var telefono = document.getElementById('telefono').value;
 
-    if (!email) {
-        alert('Por favor, ingrese un correo electrónico.');
+    if (!email || !nombre || !telefono) {
+        alert('Por favor, complete todos los campos.');
         return;
     }
 
@@ -32,7 +32,14 @@ function post() {
         } else {
             // Error al guardar datos
             console.error('Error al enviar datos:', request.status, request.statusText);
-            alert('Error al guardar datos. Por favor, inténtelo de nuevo.');
+
+            if (request.status === 400) {
+                // Error específico de contacto duplicado
+                alert('El contacto ya existe. Por favor, ingrese un correo diferente.');
+            } else {
+                // Otros errores
+                alert('Ocurrió un problema al guardar los datos. El contacto ya existe. Por favor, ingrese un correo diferente.');
+            }
         }
     };
 }
